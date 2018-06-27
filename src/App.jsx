@@ -3,12 +3,15 @@ import {Router, Route} from 'react-router-dom';
 import {connect} from 'react-redux';
 
 import history from './history'
+import HomeContainer from './components/home/home-container' 
 
 class App extends Component {
   render() {
     return (
       <Router history={history}>
-      <div></div>
+      <div>
+        <Route exact path="/" component={HomeContainer}/>
+      </div>
       </Router>
     );
   }
